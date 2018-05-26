@@ -1,0 +1,88 @@
+.container {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+    position: relative;
+}
+
+.wrap {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    top: 100px;
+    display: flex;
+    transform: rotate(31deg);
+}
+
+.row span {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+
+
+.row-1 {
+    margin-left: 10px;
+}
+
+.row-1 span:nth-of-type(2), .row-2 span:nth-of-type(2) {
+    animation-delay: .1s;
+}
+
+.row-1 span:nth-of-type(3), .row-2 span:nth-of-type(3) {
+    animation-delay: .2s;
+}
+
+.row-1 span:nth-of-type(4), .row-2 span:nth-of-type(4) {
+    animation-delay: .3s;
+}
+
+.row-1 span:nth-of-type(5), .row-2 span:nth-of-type(5) {
+    animation-delay: .4s;
+}
+
+.row-1 span:nth-of-type(6), .row-2 span:nth-of-type(6) {
+    animation-delay: .5s;
+}
+
+
+.row-2 {
+    margin-left: 60px;
+}
+
+
+
+.row-1 span {
+    background-color: white;
+    animation: row-1-anim 3s forwards cubic-bezier(1,-0.87, 0.45, 0.94) infinite; 
+}
+
+.row-2 span {
+    background-color: red;
+    animation: row-2-anim 3s forwards cubic-bezier(1,-0.87, 0.45, 0.94) infinite; 
+}
+
+
+
+@keyframes row-1-anim {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(70px) scale(0.6);
+    }
+}
+
+
+
+@keyframes row-2-anim {
+    0%, 100% {
+        transform: translateX(0) scale(0.6);
+    }
+    50% {
+        transform: translateX(-70px) scale(1);
+    }
+}
